@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-Rover AI - Robot Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-blue-700 font-bold text-xl flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Back to Portfolio
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-gradient text-white py-20 px-6 text-center shadow-lg">
+        <h1 class="text-5xl font-extrabold tracking-tight mb-4">G-Rover AI</h1>
+        <p class="text-xl text-blue-100 max-w-2xl mx-auto">
+            Robot อัจฉริยะที่ออกแบบโดยใช้ Board ESP32 CAM ควบคุมง่ายผ่านโทรศัพท์มือถือ
+        </p>
+    </header>
+
+    <main class="flex-grow max-w-5xl mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            
+            <!-- Left Column: Details -->
+            <div class="space-y-8">
+                <section>
+                    <h2 class="text-2xl font-bold mb-4 text-blue-800 border-b-2 border-blue-200 pb-2">รายละเอียดโปรเจกต์</h2>
+                    <p class="text-gray-700 leading-relaxed text-lg">
+                        G-Rover AI เป็นหุ่นยนต์ที่ออกแบบโดยใช้บอร์ด <span class="font-semibold text-blue-600">ESP32 CAM</span> 
+                        และสั่งงานควบคุมด้วยโทรศัพท์มือถือผ่านโหมด <span class="font-semibold text-blue-600">AP MODE (Access Point)</span>
+                    </p>
+                    <ul class="mt-4 space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span><span class="font-semibold">Connectivity:</span> ESP32 CAM ทำหน้าที่เป็น SERVER และมือถือเป็น CLIENT เชื่อมต่อกันได้โดยตรงไม่ต้องผ่าน Router</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span><span class="font-semibold">Function:</span> มาพร้อมฟังก์ชั่นตรวจจับวัตถุ (Object Detection) เพิ่มความฉลาดให้กับหุ่นยนต์</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span><span class="font-semibold">Alternative Mode:</span> มีโค้ดรองรับการทำงานแบบ <span class="font-bold">STA MODE</span> สำหรับเชื่อมต่อผ่าน WiFi Network</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold mb-4 text-blue-800 border-b-2 border-blue-200 pb-2">ดาวน์โหลดโค้ดโปรเจกต์</h2>
+                    <a href="https://drive.google.com/drive/folders/1Gof9xT_OaleQSCnrvvtcPO_1TwJzlVBp?fbclid=IwY2xjawRw-2NleHRuA2FlbQIxMABicmlkETEyUHl0dENDaDltbllqWDZDc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHhHZLgkd1zUktPW1SY2kGnyuzlxgcWbs7jQQebDjJDCjssDJrBQ7yqOjnK_w_aem_YWdncwBrGM1x5OxEg74fYtmOytEO&brid=YWdncwF_bCVPh54YshoFipaHjpoO" 
+                       target="_blank" 
+                       class="inline-flex items-center justify-center w-full px-6 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-colors shadow-md group">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 group-hover:animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                        Download Source Code (Google Drive)
+                    </a>
+                </section>
+            </div>
+
+            <!-- Right Column: Visuals -->
+            <div class="space-y-8">
+                <section>
+                    <h2 class="text-2xl font-bold mb-4 text-blue-800 border-b-2 border-blue-200 pb-2">วิดีโอสาธิตการใช้งาน</h2>
+                    <div class="rounded-xl overflow-hidden shadow-lg bg-black aspect-[9/16] max-w-[320px] mx-auto">
+                        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@got.dsd/video/7310062936406363397" data-video-id="7310062936406363397" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@got.dsd" href="https://www.tiktok.com/@got.dsd?refer=embed">@got.dsd</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold mb-4 text-blue-800 border-b-2 border-blue-200 pb-2">คลังภาพโปรเจกต์ (Gallery)</h2>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="rounded-lg overflow-hidden shadow-md border border-gray-200 bg-white group">
+                            <img src="g%20rover%20ai/logo.jpg" alt="Logo" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="rounded-lg overflow-hidden shadow-md border border-gray-200 bg-white group">
+                            <img src="g%20rover%20ai/วงจร.jpg" alt="Circuit" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="rounded-lg overflow-hidden shadow-md border border-gray-200 bg-white group">
+                            <img src="g%20rover%20ai/1.jpg" alt="Photo 1" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="rounded-lg overflow-hidden shadow-md border border-gray-200 bg-white group">
+                            <img src="g%20rover%20ai/2.jpg" alt="Photo 2" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="rounded-lg overflow-hidden shadow-md border border-gray-200 bg-white group col-span-2">
+                            <img src="g%20rover%20ai/3.jpg" alt="Photo 3" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-800 text-white py-8 px-6 mt-12">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-blue-200">&copy; 2024 G-Rover AI Project by นายสุวัฒน์ เจริญพิบูลย์</p>
+        </div>
+    </footer>
+
+</body>
+</html>

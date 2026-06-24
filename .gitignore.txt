@@ -1,0 +1,12 @@
+# Build folders
+[Bb]in/
+[Oo]bj/
+.vs/
+.vscode/
+
+# Build artifacts
+*.exe
+*.dll
+*.pdb
+*.cache
+dist/

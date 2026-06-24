@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temp Monitor - Windows Desktop Overlay | Suwat Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;600;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Anuphan', 'Inter', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
+        }
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px -10px rgba(99, 102, 241, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="bg-slate-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-indigo-400 font-bold text-xl flex items-center hover:text-indigo-300 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                กลับหน้าหลัก
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-gradient text-white py-24 px-6 text-center shadow-2xl relative overflow-hidden border-b border-slate-800">
+        <div class="absolute inset-0 opacity-10">
+            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0 0 L100 100 L0 100 Z" fill="rgba(99, 102, 241, 0.3)"></path>
+            </svg>
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <span class="inline-flex px-4 py-1.5 mb-6 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-sm font-semibold">.NET 9.0 + WPF + Win32 API</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-200 to-purple-400">
+                Temp Monitor
+            </h1>
+            <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+                โปรแกรมแสดงข้อมูลอุณหภูมิฮาร์ดแวร์แบบ Real-time บนหน้าจอ Windows <br>
+                ดีไซน์ลอยตัวโปร่งแสง (Glassmorphic Overlay) และรองรับการคลิกทะลุผ่าน (Click-through)
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-6xl mx-auto px-6 py-16 w-full">
+        
+        <!-- Section 1: Overview & Download -->
+        <section class="mb-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-6 text-white flex items-center">
+                    <span class="bg-indigo-600/20 text-indigo-400 p-2.5 rounded-xl mr-4 border border-indigo-500/10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2z" />
+                        </svg>
+                    </span>
+                    ภาพรวมโปรแกรม
+                </h2>
+                <p class="text-slate-400 text-lg leading-relaxed mb-6">
+                    <strong>Temp Monitor</strong> เป็นโปรแกรมขนาดเล็ก (Utility App) สำหรับผู้ใช้งาน Windows ที่ต้องการเฝ้าระวังอุณหภูมิการทำงานของอุปกรณ์ในเครื่อง เช่น CPU, GPU, SSD, RAM, VRM, และ Chipset ในขณะเล่นเกมหรือทำงานหนัก ตัวโปรแกรมจะแสดงผลลอยเหนือหน้าต่างอื่นๆ (Always on Top) ตลอดเวลา ด้วยดีไซน์สไตล์กระจกฝ้าโปร่งแสง
+                </p>
+                <p class="text-slate-400 text-lg leading-relaxed mb-8">
+                    โดดเด่นด้วยฟังก์ชันคลิกทะลุผ่าน (Click-through) ทำให้ไม่รบกวนการทำงานของเมาส์ และควบคุมความโปร่งแสง ล็อกตำแหน่ง เลือกสีตัวอักษร รวมถึงปิดโปรแกรมได้ง่ายๆ ผ่าน System Tray เมนูบริเวณมุมขวาล่างของจอ
+                </p>
+                
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+                    <h3 class="font-bold text-white mb-2 text-lg">ดาวน์โหลดตัวโปรแกรม</h3>
+                    <p class="text-slate-400 mb-4">ดาวน์โหลดไฟล์ติดตั้งพร้อมใช้งาน (Release Setup) สำหรับระบบปฏิบัติการ Windows</p>
+                    <a href="https://drive.google.com/file/d/12RPj4NTVd9RIGqVOcAAWm0HtbcvogQyw/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3 bg-indigo-600 text-white font-bold rounded-xl hover:bg-indigo-500 transition-colors shadow-lg shadow-indigo-900/50">
+                        ดาวน์โหลด Temp Monitor
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-800 bg-slate-900">
+                <img src="Temp_Monitor/preview.png" alt="Temp Monitor Preview" class="w-full h-auto object-cover">
+            </div>
+        </section>
+
+        <!-- Section 2: Key Features -->
+        <section class="mb-24">
+            <h2 class="text-3xl font-bold mb-12 text-center text-white">ฟีเจอร์เด่นของโปรแกรม</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl feature-card">
+                    <div class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center mb-6 border border-emerald-500/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">ดีไซน์ลอยตัวโปร่งแสง</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        ดีไซน์หน้าต่างแบบไร้ขอบ (WindowStyle: None) พื้นหลังเบลอสไตล์กระจกฝ้าหรูหรา และมีเงาขอบตัวอักษรเพื่อให้อ่านข้อมูลได้ชัดเจนบนทุกภาพพื้นหลังของเดสก์ท็อป
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl feature-card">
+                    <div class="w-12 h-12 bg-indigo-500/10 text-indigo-400 rounded-xl flex items-center justify-center mb-6 border border-indigo-500/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">รองรับการคลิกทะลุ</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        ใช้ Win32 API ข้ามสไตล์หน้าต่างเป็น `WS_EX_TRANSPARENT` ทำให้ไม่ว่าคุณจะคลิกเมาส์บริเวณใดของวิดเจ็ต เมาส์จะคลิกทะลุไปยังแอปด้านหลัง ไม่เกะกะการทำงาน
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl feature-card">
+                    <div class="w-12 h-12 bg-amber-500/10 text-amber-400 rounded-xl flex items-center justify-center mb-6 border border-amber-500/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19M12 21M15 19M9 17h6M9 3h6M12 3v14M3 9h18M3 13h18" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">วิเคราะห์ฮาร์ดแวร์เชิงลึก</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        เชื่อมต่อไดรเวอร์ระดับ Kernel ด้วย `LibreHardwareMonitorLib` อ่านค่าอุณหภูมิเซนเซอร์แม่นยำ ได้แก่ CPU Package/Core, GPU, NVMe SSD, RAM Load, VRM, และ Chipset
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl feature-card">
+                    <div class="w-12 h-12 bg-rose-500/10 text-rose-400 rounded-xl flex items-center justify-center mb-6 border border-rose-500/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">สีอุณหภูมิบอกสถานะ</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        ระบบจะเปลี่ยนสีตัวเลขตามระดับอุณหภูมิโดยอัตโนมัติ: เย็น (สีเขียว &lt; 50°C), อุ่น (สีส้ม 50°C - 75°C), และร้อนมาก (สีแดง &gt; 75°C) ช่วยให้สังเกตง่าย
+                    </p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl feature-card">
+                    <div class="w-12 h-12 bg-purple-500/10 text-purple-400 rounded-xl flex items-center justify-center mb-6 border border-purple-500/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">บันทึกและจำตำแหน่ง</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        เมื่อเปิดล็อกและลากหน้าต่างโปรแกรมไปยังตำแหน่งที่เหมาะสม ตัวโปรแกรมจะเซฟตำแหน่ง ล่าสุดและค่าความโปร่งแสงเก็บไว้ในไฟล์ `settings.json` เพื่อใช้ต่อในการเปิดเครื่องครั้งถัดไป
+                    </p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl feature-card">
+                    <div class="w-12 h-12 bg-cyan-500/10 text-cyan-400 rounded-xl flex items-center justify-center mb-6 border border-cyan-500/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">System Tray & Auto-Start</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        ควบคุมทั้งหมดได้จาก System Tray (มุมขวาล่างของจอ) พร้อมมีสคริปต์ลงทะเบียนเข้าสู่ Startup Folder ของระบบ เพื่อให้ตัวตรวจวัดอุณหภูมิเริ่มทำงานพร้อมเปิดคอมพิวเตอร์
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 3: Technical Details -->
+        <section class="mb-24 bg-slate-900 border border-slate-800 p-8 md:p-12 rounded-3xl">
+            <h2 class="text-2xl font-bold mb-6 text-white">สถาปัตยกรรมและการเชื่อมต่อ Windows (Win32 API)</h2>
+            <p class="text-slate-400 leading-relaxed mb-6">
+                เพื่อให้โปรแกรม WPF สามารถทำงานในลักษณะโปร่งใส ลอยตัว และคลิกทะลุได้ โปรแกรมมีการเรียกใช้งานฟังก์ชันดั้งเดิมของระบบปฏิบัติการ Windows ผ่านกระบวนการ P/Invoke ด้วย API ต่อไปนี้:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
+                <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800">
+                    <h3 class="font-mono text-indigo-400 mb-2 font-bold">WS_EX_TRANSPARENT (0x20)</h3>
+                    <p class="text-slate-400">
+                        สไตล์การทำงานหน้าต่างระดับสูงที่บอกระบบ Windows ว่า วิดเจ็ตนี้มีสถานะโปร่งใสต่อเมาส์ ทำให้ทุกๆ พิกเซลในพื้นที่ของหน้าต่างไม่รับอีเวนต์คลิกของเมาส์ และจะส่งต่อน้ำหนักการคลิกไปยังหน้าต่างเบื้องหลังทันที
+                    </p>
+                </div>
+                <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800">
+                    <h3 class="font-mono text-indigo-400 mb-2 font-bold">WS_EX_TOOLWINDOW (0x80)</h3>
+                    <p class="text-slate-400">
+                        การระบุประเภทหน้าต่างเป็นเครื่องมือ ช่วยลบหน้าต่างนี้ออกจากแถบงาน (Taskbar) และหน้าสลับแอปพลิเคชัน (Alt+Tab) เพื่อป้องกันการกดสลับสมาธิมายังหน้าวิดเจ็ตในขณะกำลังเล่นเกมหรือทำงานอื่นอยู่
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Installation Guide -->
+        <section class="bg-slate-900 border border-slate-800 p-8 md:p-12 rounded-3xl">
+            <h2 class="text-3xl font-bold mb-4 text-white">คู่มือการคอมไพล์และติดตั้งระบบ (Installation Guide)</h2>
+            <p class="text-slate-400 mb-8">เนื่องจากโปรแกรมต้องเข้าถึงฮาร์ดแวร์เพื่ออ่านค่าเซนเซอร์ จึงจำเป็นต้องเรียกใช้ด้วยสิทธิ์ผู้ดูแลระบบ (Run as Administrator)</p>
+            
+            <div class="space-y-6">
+                
+                <!-- Step 1 -->
+                <div class="p-6 rounded-2xl bg-slate-950 border border-slate-800">
+                    <h3 class="font-bold text-lg mb-2 text-white">1) ความต้องการของระบบ (Prerequisites)</h3>
+                    <ul class="text-slate-400 list-disc pl-5 space-y-1">
+                        <li>ระบบปฏิบัติการ Windows 10 หรือ Windows 11 (64-bit)</li>
+                        <li>ติดตั้ง <a href="https://dotnet.microsoft.com/download/dotnet/9.0" target="_blank" class="text-indigo-400 underline">.NET 9.0 SDK</a> หรือติดตั้งผ่าน Visual Studio Installer</li>
+                    </ul>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="p-6 rounded-2xl bg-slate-950 border border-slate-800">
+                    <h3 class="font-bold text-lg mb-2 text-white">2) ขั้นตอนการคอมไพล์ผ่าน dotnet CLI</h3>
+                    <p class="text-slate-400 mb-3">เปิด PowerShell หรือ Command Prompt ในโฟลเดอร์โปรเจกต์ `Temp_Monitor` แล้วทำตามคำสั่งต่อไปนี้:</p>
+                    <pre class="bg-slate-900 text-slate-300 p-4 rounded-xl font-mono text-xs overflow-x-auto border border-slate-800">
+# 1. โหลดแพ็กเกจ Dependencies ทั้งหมด
+dotnet restore
+
+# 2. คอมไพล์โปรเจกต์แบบ Release Mode
+dotnet build -c Release</pre>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="p-6 rounded-2xl bg-slate-950 border border-slate-800">
+                    <h3 class="font-bold text-lg mb-2 text-white">3) ติดตั้งโปรแกรมแบบเปิดพร้อมใช้งานทันที (Autostart Setup)</h3>
+                    <p class="text-slate-400 mb-3">มีไฟล์อำนวยความสะดวกในโฟลเดอร์โปรเจกต์ที่คุณสามารถเลือกใช้งานได้:</p>
+                    <ul class="text-slate-400 list-disc pl-5 space-y-2">
+                        <li>
+                            <strong class="text-white">รันผ่าน Powershell:</strong> คลิกขวาที่ไฟล์ <code class="text-indigo-400 font-mono">install.ps1</code> -> เลือก <strong>Run with PowerShell</strong> ระบบจะสร้างโฟลเดอร์ใน Program Files และลงทะเบียน Startup ให้อัตโนมัติ
+                        </li>
+                        <li>
+                            <strong class="text-white">รันผ่าน Batch File:</strong> ดับเบิลคลิกที่ไฟล์ <code class="text-indigo-400 font-mono">install.bat</code> เพื่อช่วยนำทางคำสั่ง
+                        </li>
+                        <li>
+                            <strong class="text-white">รันผ่าน Jupyter Notebook:</strong> เปิดไฟล์ <code class="text-indigo-400 font-mono">Setup_AutoInstall.ipynb</code> เพื่อรันคำสั่งตรวจสอบสิทธิ์ ติดตั้ง และลงทะเบียนแบบเป็นขั้นตอนผ่านโค้ด Python
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="p-6 rounded-2xl bg-amber-500/10 border border-amber-500/20">
+                    <h3 class="font-bold text-lg mb-2 text-amber-300">💡 การปิดโปรแกรมหรือปรับแต่งเพิ่มเติม</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        เนื่องจากวิดเจ็ตถูกออกแบบมาให้ไม่มีขอบหน้าต่างและคลิกทะลุได้ เพื่อไม่ให้เกะกะสายตา หากต้องการปรับค่าความสว่าง ปิดระบบล็อกหน้าต่างเพื่อย้ายที่ หรือสั่งปิดโปรแกรม ให้มองหาไอคอนโปรแกรม <strong class="text-white">Temp Monitor</strong> บริเวณมุมขวาล่างของจอคอมพิวเตอร์ (System Tray Icon) คลิกขวาเพื่อเปิดเมนูคำสั่งได้ตามต้องการครับ
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 px-6 mt-16 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto text-center">
+            <p>© 2026 Temp Monitor Project by Suwat Jaroenpiboon</p>
+            <a href="index.html" class="mt-4 inline-flex items-center px-5 py-2 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-500 transition-colors">กลับไปที่ Portfolio</a>
+        </div>
+    </footer>
+
+</body>
+</html>
