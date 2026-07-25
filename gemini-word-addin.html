@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Assistant — Word Add-in | Suwat Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;600;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Anuphan', 'Inter', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0d9488 50%, #0f172a 100%);
+        }
+        .card-shadow {
+            box-shadow: 0 10px 30px -10px rgba(13, 148, 136, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="bg-slate-950/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-teal-400 font-bold text-xl flex items-center hover:text-teal-300 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                กลับหน้าหลัก
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-gradient text-white py-24 px-6 text-center shadow-2xl relative overflow-hidden border-b border-slate-800">
+        <div class="absolute inset-0 opacity-15">
+            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0 100 C 20 0 50 0 100 100 Z" fill="rgba(13, 148, 136, 0.2)"></path>
+            </svg>
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <span class="inline-flex px-4 py-1.5 mb-6 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-300 text-sm font-semibold">Office Web Add-in + Google Gemini API</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-teal-100 to-indigo-300">
+                Gemini Assistant — Word Add-in
+            </h1>
+            <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+                AI-Powered Writing Assistant แบบ Sidebar สำหรับ Microsoft Word <br>
+                ช่วยตรวจสอบ เกลาสำนวน แก้คำผิดราชการ และเปรียบเทียบเอกสารแนบด้วยระบบ AI อัจฉริยะ
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-6xl mx-auto px-6 py-16 w-full">
+        
+        <!-- Section 1: Overview & Download -->
+        <section class="mb-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-6 text-white flex items-center">
+                    <span class="bg-teal-600/20 text-teal-400 p-2.5 rounded-xl mr-4 border border-teal-500/10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                    </span>
+                    ความสามารถของโปรแกรม
+                </h2>
+                <div class="text-slate-400 text-lg space-y-4 mb-8">
+                    <p>
+                        <strong>Gemini Assistant</strong> เป็นโปรแกรมเสริมสำหรับ Microsoft Word (Office Web Add-in) ที่ถูกออกแบบมาเพื่อยกระดับการทำงานเอกสาร โดยเฉพาะการตรวจสอบความถูกต้องของเอกสารราชการ การเกลาภาษา และการเปรียบเทียบข้อมูลระหว่างเอกสารหลักกับไฟล์แนบอ้างอิงภายนอก
+                    </p>
+                    <p>
+                        ตัวโปรแกรมรันในระบบ Client-Side 100% เชื่อมต่อโดยตรงหา Google Gemini API ผ่านเว็บเบราว์เซอร์ของ Word ไม่ต้องพึ่งพาเซิร์ฟเวอร์คนกลาง ช่วยรักษาความลับของเอกสารและ API Key ของคุณอย่างปลอดภัยสูงสุด
+                    </p>
+                </div>
+                
+                <div class="bg-slate-800/80 border border-slate-700/50 p-6 rounded-2xl">
+                    <h3 class="font-bold text-white mb-2 text-lg">ดาวน์โหลดโปรเจกต์ (Download Add-in)</h3>
+                    <p class="text-slate-400 mb-4">ดาวน์โหลดซอร์สโค้ดและไฟล์ Manifest เพื่อนำไปติดตั้งใน Microsoft Word ของคุณ</p>
+                    <a href="https://drive.google.com/file/d/124Qo7K1KB5PTK7GgZXnLU1lwb5a9fm7-/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3 bg-teal-600 text-white font-bold rounded-xl hover:bg-teal-500 transition-colors shadow-lg shadow-teal-900/50">
+                        ดาวน์โหลด Gemini Assistant
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-800 bg-slate-900">
+                <img src="Office-Web-Add-in/1.jpg" alt="Gemini Assistant Word Add-in Screenshot" class="w-full h-auto object-cover">
+            </div>
+        </section>
+
+        <!-- Section 2: Benefits & Features -->
+        <section class="mb-24">
+            <h2 class="text-3xl font-bold mb-12 text-center text-white">ประโยชน์และฟีเจอร์เด่น</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Benefit 1 -->
+                <div class="bg-slate-800/40 border border-slate-800 p-8 rounded-2xl card-shadow">
+                    <div class="w-12 h-12 bg-teal-500/10 text-teal-400 rounded-xl flex items-center justify-center mb-6 border border-teal-500/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">🔍 ตรวจสอบความถูกต้องและทำไฮไลท์อัตโนมัติ</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        เมื่อแนบเอกสารอ้างอิงประกอบ (เช่น ตาราง Excel หรือเอกสารโครงการเดิม) และกดปุ่มเปรียบเทียบ ระบบจะตรวจสอบความขัดแย้ง 5 มิติ (เช่น ตัวเลขสะกดผิด รูปแบบทางการ ยอดเงินเรื่องย่อย) และระบายสีเหลือง (Highlight) พร้อมปักกล่องคอมเมนต์ (Comment) ข้อผิดพลาดลงหน้ากระดาษ Word ให้ทันทีโดยอัตโนมัติ
+                    </p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="bg-slate-800/40 border border-slate-800 p-8 rounded-2xl card-shadow">
+                    <div class="w-12 h-12 bg-teal-500/10 text-teal-400 rounded-xl flex items-center justify-center mb-6 border border-teal-500/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">🗂️ การอ่านไฟล์ออฟไลน์ (Local Text Parsing)</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        รองรับการถอดข้อความจากไฟล์ในเครื่องของคุณแบบไม่ต้องส่งขึ้นเซิร์ฟเวอร์ โดยรองรับทั้งเอกสาร Word (.docx) โดยใช้ mammoth.js, ไฟล์ Excel (.xlsx) โดยใช้ SheetJS และไฟล์เอกสาร PDF (.pdf) โดยใช้ pdf.js เพื่อให้ AI นำข้อความดิบไปใช้วิเคราะห์ต่อ
+                    </p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="bg-slate-800/40 border border-slate-800 p-8 rounded-2xl card-shadow">
+                    <div class="w-12 h-12 bg-teal-500/10 text-teal-400 rounded-xl flex items-center justify-center mb-6 border border-teal-500/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">💬 แชทโต้ตอบโต้ตอบต่อเนื่อง (Multi-turn Chat)</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        แผงควบคุมหลักเป็นระบบแชทแบบโต้ตอบต่อเนื่องสะสมความจำ (Multi-turn) ผู้ใช้สามารถสนทนากล่อมคำ สั่งงานให้สรุป คัดย่อ ร่างเนื้อหาเฉพาะ หรือส่งงานตรวจทานเพิ่มเติมได้อย่างยืดหยุ่น โดยสามารถกดปุ่ม "เริ่มคุยใหม่" เพื่อล้างค่าประวัติประมวลผลได้ทันที
+                    </p>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="bg-slate-800/40 border border-slate-800 p-8 rounded-2xl card-shadow">
+                    <div class="w-12 h-12 bg-teal-500/10 text-teal-400 rounded-xl flex items-center justify-center mb-6 border border-teal-500/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">✔ ปุ่มแก้ไขข้อความรายจุด (Granular Control)</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        เพื่อป้องกันไม่ให้ข้อมูลทั้งแผ่นเอกสารถูกลบหรือเขียนทับโดยไม่ได้ตั้งใจ ผลวิเคราะห์คำแนะนำจะถูกแสดงเป็นการ์ดแยกจุดเด่นๆ พร้อมปุ่ม **`✔ แก้ไข`** เพื่อใช้ความสามารถ OfficeJS เขียนทับเฉพาะคำที่เลือกเป็นรายคำได้อย่างปลอดภัย
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 3: Gemini API Key Setup -->
+        <section class="mb-24 bg-slate-800/60 border border-slate-700/50 p-8 md:p-12 rounded-3xl">
+            <h2 class="text-2xl font-bold mb-6 text-white flex items-center">
+                <span class="bg-teal-500/10 p-2.5 rounded-xl mr-4 text-teal-400 border border-teal-500/20">🔑</span>
+                วิธีสร้างและติดตั้ง Gemini API Key
+            </h2>
+            <div class="space-y-4 text-slate-400">
+                <div class="flex gap-4">
+                    <span class="w-8 h-8 rounded-full bg-teal-900 text-teal-300 font-bold flex items-center justify-center flex-shrink-0">1</span>
+                    <div>
+                        <h4 class="font-bold text-white">ไปยัง Google AI Studio</h4>
+                        <p class="text-slate-400">เปิดบราวเซอร์แล้วเข้าไปที่เว็บไซต์ <a href="https://aistudio.google.com/" target="_blank" class="text-teal-400 underline hover:text-teal-300">Google AI Studio</a></p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <span class="w-8 h-8 rounded-full bg-teal-900 text-teal-300 font-bold flex items-center justify-center flex-shrink-0">2</span>
+                    <div>
+                        <h4 class="font-bold text-white">สร้าง API Key ใหม่</h4>
+                        <p class="text-slate-400">ล็อกอินด้วยบัญชี Google จากนั้นคลิกปุ่ม <strong>"Get API Key"</strong> หรือ <strong>"Create API Key"</strong> ทางด้านซ้าย และเลือกสร้างคีย์ (คีย์ที่สร้างจะสามารถเลือกเป็นคีย์ฟรีสำหรับงานทดสอบได้)</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <span class="w-8 h-8 rounded-full bg-teal-900 text-teal-300 font-bold flex items-center justify-center flex-shrink-0">3</span>
+                    <div>
+                        <h4 class="font-bold text-white">นำมาใส่ใน Add-in</h4>
+                        <p class="text-slate-400">เมื่อคัดลอกคีย์มาแล้ว ให้คลิกปุ่มแฮมเบอร์เกอร์เมนู <strong>(☰)</strong> บริเวณมุมซ้ายบนของแถบ Add-in บนโปรแกรม Word แล้ววางรหัสคีย์ลงในกล่องข้อความ และเลือกโมเดลที่แนะนำ (เช่น <strong>gemini-3.1-flash-lite</strong>)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Installation Guide -->
+        <section class="bg-slate-900 border border-slate-800 p-8 md:p-12 rounded-3xl">
+            <h2 class="text-3xl font-bold mb-8 text-white">วิธีติดตั้ง Add-in ลงบน Microsoft Word (Installation Guide)</h2>
+            
+            <div class="space-y-8">
+                
+                <!-- Option 1 -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-teal-300 flex items-center">
+                        <span class="mr-2">☁️</span>
+                        ช่องทางที่ 1: การใช้งานจริงผ่านคลาวด์ Vercel (สะดวกสุด)
+                    </h3>
+                    <p class="text-slate-400 mb-4 leading-relaxed">
+                        แอปพลิเคชันเวอร์ชันอ้างอิงได้รับการ Deploy สำเร็จบนอินเทอร์เน็ตที่ลิงก์ <a href="https://office-web-add-in.vercel.app" target="_blank" class="text-teal-400 underline hover:text-teal-300">https://office-web-add-in.vercel.app</a> ทำให้ไม่จำเป็นต้องรัน Server ในเครื่องคอมพิวเตอร์ของคุณเอง
+                    </p>
+                    <div class="p-6 rounded-2xl bg-slate-950 border border-slate-800 space-y-3">
+                        <h4 class="font-bold text-white">ขั้นตอนการติดตั้ง Catalog:</h4>
+                        <ol class="text-slate-400 list-decimal pl-5 space-y-2 text-sm">
+                            <li>สร้างโฟลเดอร์สำหรับเก็บ Manifest บนเครื่อง เช่น <code class="text-teal-400 font-mono">C:\AddinManifests\</code> จากนั้นวางไฟล์ <code class="text-teal-400 font-mono">manifest.xml</code> ไว้ในนั้น</li>
+                            <li>เปิดโฟลเดอร์ คลิกขวา -> Properties -> แท็บ <strong>Sharing</strong> -> กด <strong>Share...</strong> เพื่อเปิดการแชร์ในเครื่องและคัดลอก Network Path (เช่น <code class="text-slate-400 font-mono">\\PCName\AddinManifests</code>)</li>
+                            <li>เปิดโปรแกรม Word ไปที่เมนู <strong>ไฟล์ (File)</strong> -> <strong>ตัวเลือก (Options)</strong> -> <strong>ศูนย์ความเชื่อถือ (Trust Center)</strong> -> <strong>การตั้งค่าศูนย์ความเชื่อถือ (Trust Center Settings)</strong></li>
+                            <li>เลือกแท็บ <strong>แค็ตตาล็อก Add-in ที่เชื่อถือได้ (Trusted Add-in Catalogs)</strong></li>
+                            <li>กรอก Network Path ลงในช่อง URL แค็ตตาล็อก จากนั้นกด <strong>เพิ่มแค็ตตาล็อก (Add catalog)</strong> และติ๊กเลือก <strong>แสดงในเมนู (Show in Menu)</strong> จากนั้นคลิกตกลงแล้วทำการปิดเปิดโปรแกรม Word ใหม่หนึ่งครั้ง</li>
+                            <li>เปิดหน้ากระดาษ Word ไปที่แถบเมนู <strong>แทรก (Insert)</strong> -> คลิกปุ่ม <strong>Add-ins</strong> -> เลือก <strong>โฟลเดอร์ที่แชร์ (Shared Folder)</strong> จะพบปุ่มเรียกใช้งาน <strong>Gemini Assistant</strong> โผล่ขึ้นมาให้กดเปิดครับ</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <hr class="border-slate-800">
+
+                <!-- Option 2 -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-teal-300 flex items-center">
+                        <span class="mr-2">💻</span>
+                        ช่องทางที่ 2: การเปิดรัน Server ในเครื่องตัวเอง (Local Development)
+                    </h3>
+                    <p class="text-slate-400 mb-4 leading-relaxed">
+                        สำหรับนักพัฒนาที่ต้องการแก้ไขปรับปรุงตรรกะในไฟล์โค้ด JS หรือ CSS เพิ่มเติม:
+                    </p>
+                    <div class="p-6 rounded-2xl bg-slate-950 border border-slate-800 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-white mb-2 text-sm">1. ติดตั้ง Dependencies และรันแอป</h4>
+                            <p class="text-slate-400 text-sm mb-2">เปิด Terminal ในโฟลเดอร์โปรเจกต์และพิมพ์คำสั่งดังนี้:</p>
+                            <pre class="bg-slate-900 text-slate-300 p-4 rounded-xl font-mono text-xs overflow-x-auto border border-slate-800">
+# ติดตั้ง NodeJS แพ็กเกจที่เกี่ยวข้อง
+npm install
+
+# รัน Server จำลองโฮสต์โลคัล
+npm run dev</pre>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white mb-2 text-sm">2. เชื่อมต่อเข้า Word</h4>
+                            <p class="text-slate-400 text-sm">
+                                เปิดโปรแกรม Word และเข้าผ่านแท็บแคตตาล็อกโฟลเดอร์แชร์ เช่นเดียวกับแบบคลาวด์ แต่ตรวจสอบไฟล์ Manifest ให้ชี้ปลายทางมายัง HTTPS Port ของเซิร์ฟเวอร์จำลองในเครื่องของคุณเอง (เช่น <code class="text-teal-400 font-mono">https://localhost:3000/taskpane.html</code>)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-500 py-12 px-6 mt-16 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto text-center">
+            <p>© 2026 Gemini Assistant — Word Add-in Project by Suwat Jaroenpiboon</p>
+            <a href="index.html" class="mt-4 inline-flex items-center px-5 py-2 rounded-lg bg-teal-600 text-white font-semibold hover:bg-teal-500 transition-colors">กลับไปที่ Portfolio</a>
+        </div>
+    </footer>
+
+</body>
+</html>
